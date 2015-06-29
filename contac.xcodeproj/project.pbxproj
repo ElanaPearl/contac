@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		0AD90A7F1B41C6EE00131AF5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD90A7E1B41C6EE00131AF5 /* main.m */; };
 		0AD90A821B41C6EE00131AF5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD90A811B41C6EE00131AF5 /* AppDelegate.m */; };
-		0AD90A851B41C6EE00131AF5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD90A841B41C6EE00131AF5 /* ViewController.m */; };
-		0AD90A881B41C6EE00131AF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AD90A861B41C6EE00131AF5 /* Main.storyboard */; };
 		0AD90A8A1B41C6EE00131AF5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AD90A891B41C6EE00131AF5 /* Images.xcassets */; };
 		0AD90A8D1B41C6EE00131AF5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD90A8B1B41C6EE00131AF5 /* LaunchScreen.xib */; };
 		0AD90A991B41C6EF00131AF5 /* contacTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD90A981B41C6EF00131AF5 /* contacTests.m */; };
@@ -34,9 +32,6 @@
 		0AD90A7E1B41C6EE00131AF5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0AD90A801B41C6EE00131AF5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0AD90A811B41C6EE00131AF5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0AD90A831B41C6EE00131AF5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0AD90A841B41C6EE00131AF5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		0AD90A871B41C6EE00131AF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0AD90A891B41C6EE00131AF5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0AD90A8C1B41C6EE00131AF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		0AD90A921B41C6EF00131AF5 /* contacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = contacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,13 +82,10 @@
 			isa = PBXGroup;
 			children = (
 				0AD90A801B41C6EE00131AF5 /* AppDelegate.h */,
+				0AD90A811B41C6EE00131AF5 /* AppDelegate.m */,
 				4C9C6EE81B41DA4C004C4299 /* SecretScreenViewController.h */,
 				4C9C6EE91B41DA4C004C4299 /* SecretScreenViewController.m */,
 				4C9C6EEA1B41DA4C004C4299 /* SecretScreenViewController.xib */,
-				0AD90A811B41C6EE00131AF5 /* AppDelegate.m */,
-				0AD90A831B41C6EE00131AF5 /* ViewController.h */,
-				0AD90A841B41C6EE00131AF5 /* ViewController.m */,
-				0AD90A861B41C6EE00131AF5 /* Main.storyboard */,
 				0AD90A891B41C6EE00131AF5 /* Images.xcassets */,
 				0AD90A8B1B41C6EE00131AF5 /* LaunchScreen.xib */,
 				0AD90A7C1B41C6EE00131AF5 /* Supporting Files */,
@@ -208,7 +200,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C9C6EEC1B41DA4C004C4299 /* SecretScreenViewController.xib in Resources */,
-				0AD90A881B41C6EE00131AF5 /* Main.storyboard in Resources */,
 				0AD90A8D1B41C6EE00131AF5 /* LaunchScreen.xib in Resources */,
 				0AD90A8A1B41C6EE00131AF5 /* Images.xcassets in Resources */,
 			);
@@ -229,7 +220,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C9C6EEB1B41DA4C004C4299 /* SecretScreenViewController.m in Sources */,
-				0AD90A851B41C6EE00131AF5 /* ViewController.m in Sources */,
 				0AD90A821B41C6EE00131AF5 /* AppDelegate.m in Sources */,
 				0AD90A7F1B41C6EE00131AF5 /* main.m in Sources */,
 			);
@@ -254,14 +244,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		0AD90A861B41C6EE00131AF5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0AD90A871B41C6EE00131AF5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0AD90A8B1B41C6EE00131AF5 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
