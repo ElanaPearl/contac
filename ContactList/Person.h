@@ -15,6 +15,7 @@
 @property (nonatomic, weak) Person *container;
 
 @property (nonatomic, copy) NSString *name;
+//@property (nonatomic, copy) NSString *initial;
 
 
 - (instancetype)initWithName:(NSString *)name;

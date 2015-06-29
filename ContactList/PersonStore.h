@@ -12,6 +12,7 @@
 @interface PersonStore : NSObject
 
 - (NSArray *)allPeople;
+- (NSMutableDictionary *)initials;
 - (Person *)createPerson;
 - (void)removePerson:(Person *)person;
 - (void)movePersonAtIndex:(NSInteger)source

@@ -97,6 +97,11 @@
                                 toIndex:destinationIndexPath.row];
 }
 
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
+{
+    return [self.personStore.allPeople valueForKey:@]
+}
+
 
 
 @end

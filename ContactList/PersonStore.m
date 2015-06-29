@@ -15,6 +15,8 @@
 
 @implementation PersonStore
 
+static NSString *letters = @"abcdefghijklmnopqrstuvwxyz";
+
 - (instancetype)init
 {
     self = [super init];
@@ -33,6 +35,11 @@
 {
     Person *newPerson = [Person randomPerson];
     [self.people addObject:newPerson];
+    
+    NSString *initial = [newPerson.name substringWithRange:[newPerson.name rangeOfComposedCharacterSequenceAtIndex:0]];
+    
+    [self.initials addObject:newPerson forKey:initial];
+    
     return newPerson;
 }
 
