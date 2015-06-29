@@ -16,6 +16,10 @@
 		E479481E1B41C7EA00B41DA9 /* Contac_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = E479481D1B41C7EA00B41DA9 /* Contac_Tests.m */; };
 		E479482A1B41C88000B41DA9 /* ContactPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E47948281B41C88000B41DA9 /* ContactPageViewController.m */; };
 		E479482B1B41C88000B41DA9 /* ContactPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E47948291B41C88000B41DA9 /* ContactPageViewController.xib */; };
+		E47948341B42003000B41DA9 /* CustomCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = E47948331B42003000B41DA9 /* CustomCamera.m */; };
+		E479483A1B42043600B41DA9 /* CustomCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E47948391B42043600B41DA9 /* CustomCameraViewController.m */; };
+		E479483C1B42068400B41DA9 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = E479483B1B42068400B41DA9 /* back.png */; };
+		E47948401B4211E300B41DA9 /* overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = E479483F1B4211E300B41DA9 /* overlay.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,12 @@
 		E47948271B41C88000B41DA9 /* ContactPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactPageViewController.h; sourceTree = "<group>"; };
 		E47948281B41C88000B41DA9 /* ContactPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactPageViewController.m; sourceTree = "<group>"; };
 		E47948291B41C88000B41DA9 /* ContactPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactPageViewController.xib; sourceTree = "<group>"; };
+		E47948321B42003000B41DA9 /* CustomCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCamera.h; sourceTree = "<group>"; };
+		E47948331B42003000B41DA9 /* CustomCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCamera.m; sourceTree = "<group>"; };
+		E47948381B42043600B41DA9 /* CustomCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCameraViewController.h; sourceTree = "<group>"; };
+		E47948391B42043600B41DA9 /* CustomCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCameraViewController.m; sourceTree = "<group>"; };
+		E479483B1B42068400B41DA9 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		E479483F1B4211E300B41DA9 /* overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overlay.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,13 +96,19 @@
 		E47948001B41C7EA00B41DA9 /* Contac+ */ = {
 			isa = PBXGroup;
 			children = (
+				E479483F1B4211E300B41DA9 /* overlay.png */,
+				E479483B1B42068400B41DA9 /* back.png */,
 				E47948051B41C7EA00B41DA9 /* AppDelegate.h */,
 				E47948061B41C7EA00B41DA9 /* AppDelegate.m */,
 				E47948081B41C7EA00B41DA9 /* ViewController.h */,
 				E47948091B41C7EA00B41DA9 /* ViewController.m */,
 				E47948271B41C88000B41DA9 /* ContactPageViewController.h */,
 				E47948281B41C88000B41DA9 /* ContactPageViewController.m */,
+				E47948381B42043600B41DA9 /* CustomCameraViewController.h */,
+				E47948391B42043600B41DA9 /* CustomCameraViewController.m */,
 				E47948291B41C88000B41DA9 /* ContactPageViewController.xib */,
+				E47948321B42003000B41DA9 /* CustomCamera.h */,
+				E47948331B42003000B41DA9 /* CustomCamera.m */,
 				E479480B1B41C7EA00B41DA9 /* Main.storyboard */,
 				E479480E1B41C7EA00B41DA9 /* Images.xcassets */,
 				E47948101B41C7EA00B41DA9 /* LaunchScreen.xib */,
@@ -207,7 +223,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E47948401B4211E300B41DA9 /* overlay.png in Resources */,
 				E479480D1B41C7EA00B41DA9 /* Main.storyboard in Resources */,
+				E479483C1B42068400B41DA9 /* back.png in Resources */,
 				E47948121B41C7EA00B41DA9 /* LaunchScreen.xib in Resources */,
 				E479482B1B41C88000B41DA9 /* ContactPageViewController.xib in Resources */,
 				E479480F1B41C7EA00B41DA9 /* Images.xcassets in Resources */,
@@ -228,7 +246,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E47948341B42003000B41DA9 /* CustomCamera.m in Sources */,
 				E479480A1B41C7EA00B41DA9 /* ViewController.m in Sources */,
+				E479483A1B42043600B41DA9 /* CustomCameraViewController.m in Sources */,
 				E47948071B41C7EA00B41DA9 /* AppDelegate.m in Sources */,
 				E479482A1B41C88000B41DA9 /* ContactPageViewController.m in Sources */,
 				E47948041B41C7EA00B41DA9 /* main.m in Sources */,

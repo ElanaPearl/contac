@@ -8,7 +8,11 @@
 
 #import "ViewController.h"
 
-@interface ContactPageViewController : ViewController
+@interface ContactPageViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+{
+    UIImageView *myImageView;
+    UIImage *myImage;
+}
 
 
 @end

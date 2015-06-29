@@ -9,8 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
-@interface CustomCameraViewController : UIViewController
-<UIImagePickerControllerDelegate, UINavigationControllerDelegate>{
+@interface CustomCameraViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+{
+    UIImageView *myImageView;
     UIImage *myImage;
 }
+
+
 @end

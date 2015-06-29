@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CustomCamera : UIImagePickerController
+@interface CustomCamera : UIImagePickerController{
+    
+}
 
 @end

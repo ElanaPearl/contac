@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContactPageViewController">
             <connections>
+                <outlet property="imageView" destination="SuI-2w-iLP" id="67J-3w-drx"/>
                 <outlet property="locationSwitch" destination="FQq-sb-mud" id="Tju-AF-YTK"/>
                 <outlet property="nameField" destination="UO1-L2-35s" id="EG8-MY-B6A"/>
                 <outlet property="nameView" destination="05f-wz-E34" id="3L4-yk-qwC"/>
@@ -130,6 +131,9 @@
                     </subviews>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SuI-2w-iLP">
+                    <rect key="frame" x="38" y="30" width="299" height="593"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>

@@ -7,6 +7,7 @@
 //
 
 #import "ContactPageViewController.h"
+#import "CustomCamera.h"
 
 @interface ContactPageViewController ()
 
@@ -21,6 +22,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *playButton;
 @property (weak, nonatomic) IBOutlet UIView *nameView;
 
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
 @end
 
 @implementation ContactPageViewController
@@ -28,6 +31,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void) launchCamera{
+    CustomCamera *cameraController = [[CustomCamera alloc]init];
+    cameraController.sourceType = UIImagePickerControllerSourceTypeCamera;
+    cameraController.cameraDevice = UIImagePickerControllerCameraDeviceFront;
+    cameraController.delegate = self;
+    cameraController.showsCameraControls = NO;
+    cameraController.navigationBarHidden = YES;
+    cameraController.toolbarHidden = YES;    
+    UIImageView *overlay = [[UIImageView alloc]
+                                      initWithImage:[UIImage imageNamed:@"overlay.png"]];
+    
+    cameraController.cameraOverlayView = overlay;
+    [self presentViewController:cameraController animated:YES completion:nil];
+    NSLog(@"launchCamera");
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo{
+    myImage = image;
+    myImageView.image = myImage;
+    NSLog(@"mandela is relapsing");
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    self.imageView.image = myImage;
 }
 
 
@@ -38,6 +65,7 @@
     BOOL status = self.singleStatusSwitch.isOn;
     BOOL location = self.locationSwitch.isOn;
     NSLog(@"%@, %@, %d single, %d location", name, phone, (int) status, (int) location);
+    [self launchCamera];
 
 }
 

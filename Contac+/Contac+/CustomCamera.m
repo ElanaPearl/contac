@@ -10,6 +10,10 @@
 
 @implementation CustomCamera
 
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
+    [self takePicture];
+    NSLog(@"asfa");
+}
 
 
 @end
