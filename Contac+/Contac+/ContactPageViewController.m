@@ -16,6 +16,10 @@
 @property (weak, nonatomic) IBOutlet UISwitch *singleStatusSwitch;
 @property (weak, nonatomic) IBOutlet UISwitch *locationSwitch;
 @property (weak, nonatomic) IBOutlet UIButton *saveContact;
+@property (weak, nonatomic) IBOutlet UILabel *recordLabel;
+@property (weak, nonatomic) IBOutlet UIButton *stopButton;
+@property (weak, nonatomic) IBOutlet UIButton *playButton;
+@property (weak, nonatomic) IBOutlet UIView *nameView;
 
 @end
 
@@ -24,8 +28,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
-    
+}
+
+
+
+- (IBAction) saveContactAndTakePicture:(id)sender{
+    NSString *name = self.nameField.text;
+    NSString *phone = self.phoneField.text;
+    BOOL status = self.singleStatusSwitch.isOn;
+    BOOL location = self.locationSwitch.isOn;
+    NSLog(@"%@, %@, %d single, %d location", name, phone, (int) status, (int) location);
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,5 +55,12 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.phoneField resignFirstResponder];
+    [self.nameField resignFirstResponder];
+    
+}
 
 @end
