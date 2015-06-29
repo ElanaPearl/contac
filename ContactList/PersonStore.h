@@ -13,5 +13,8 @@
 
 - (NSArray *)allPeople;
 - (Person *)createPerson;
+- (void)removePerson:(Person *)person;
+- (void)movePersonAtIndex:(NSInteger)source
+                  toIndex:(NSInteger)destination;
 
 @end

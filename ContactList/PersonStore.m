@@ -36,6 +36,25 @@
     return newPerson;
 }
 
+- (void)removePerson:(Person *)person
+{
+    [self.people removeObjectIdenticalTo:person];
+}
+
+- (void)movePersonAtIndex:(NSInteger)source
+                  toIndex:(NSInteger)destination
+{
+    if (source == destination) {
+        return;
+    }
+    
+    id movedPerson = self.people[source];
+    
+    [self.people removeObjectIdenticalTo:movedPerson];
+    [self.people insertObject:movedPerson
+                      atIndex:destination];
+}
+
 
 
 @end

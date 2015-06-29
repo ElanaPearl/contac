@@ -21,11 +21,24 @@
 @implementation PersonViewController
 
 - (IBAction)addNewPerson:(id)sender {
+    Person *newPerson = [self.personStore createPerson];
+    
+    NSInteger index = [self.personStore.allPeople indexOfObjectIdenticalTo:newPerson];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
+    
+    [self.tableView insertRowsAtIndexPaths:@[indexPath]
+                          withRowAnimation:UITableViewRowAnimationTop];
     
 }
 
 - (IBAction)toggleEditingMode:(id)sender {
-    
+    if (self.editing) {
+        [sender setTitle:@"Edit" forState:UIControlStateNormal];
+        [self setEditing:NO animated:YES];
+    } else {
+        [sender setTitle:@"Done" forState:UIControlStateNormal];
+        [self setEditing:YES animated:YES];
+    }
 }
 
 - (instancetype)initWithPersonStore:(PersonStore *)store
@@ -33,10 +46,6 @@
     self = [super initWithNibName:nil bundle:nil];
     if (self) {
         self.personStore = store;
-        
-        for (int i = 0; i < 5; i++) {
-            [self.personStore createPerson];
-        }
     }
     return self;
 }
@@ -69,6 +78,23 @@
     
     [[NSBundle mainBundle] loadNibNamed:@"HeaderView" owner:self options:nil];
     self.tableView.tableHeaderView = self.headerView;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete){
+        Person *person = self.personStore.allPeople[indexPath.row];
+        [self.personStore removePerson:person];
+        
+        [self.tableView deleteRowsAtIndexPaths:@[indexPath]
+                              withRowAnimation:UITableViewRowAnimationFade];
+    }
+}
+
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath
+{
+    [self.personStore movePersonAtIndex:sourceIndexPath.row
+                                toIndex:destinationIndexPath.row];
 }
 
 
