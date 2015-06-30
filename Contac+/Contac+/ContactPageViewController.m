@@ -169,7 +169,20 @@
     recorder.delegate = self;
     recorder.meteringEnabled = YES;
     [recorder prepareToRecord];
+    
+    UITapGestureRecognizer *doubleTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                                          action:@selector(doubleTap:)];
+    doubleTapRecognizer.numberOfTapsRequired = 2;
+    doubleTapRecognizer.delaysTouchesBegan = YES;
+    [self.view addGestureRecognizer:doubleTapRecognizer];
 }
+
+
+- (void)doubleTap:(UIGestureRecognizer *)gestureRecognizer {
+    self.imageView.image = nil;
+}
+
+
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
