@@ -7,12 +7,20 @@
 //
 
 #import "ViewController.h"
+#import <AVFoundation/AVFoundation.h>
 
-@interface ContactPageViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface ContactPageViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, AVAudioRecorderDelegate, AVAudioPlayerDelegate>
 {
     UIImageView *myImageView;
     UIImage *myImage;
 }
+@property (weak, nonatomic) IBOutlet UIButton *recordButton;
+@property (weak, nonatomic) IBOutlet UIButton *stopButton;
+@property (weak, nonatomic) IBOutlet UIButton *playButton;
+
+- (IBAction)recordTapped:(id)sender;
+- (IBAction)stopTapped:(id)sender;
+- (IBAction)playTapped:(id)sender;
 
 
 @end

@@ -9,29 +9,25 @@
 #import "ContactPageViewController.h"
 #import "CustomCamera.h"
 
-@interface ContactPageViewController ()
-
+@interface ContactPageViewController (){
+    AVAudioRecorder *recorder;
+    AVAudioPlayer *player;
+}
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITextField *phoneField;
-@property (weak, nonatomic) IBOutlet UIButton *recordButton;
 @property (weak, nonatomic) IBOutlet UISwitch *singleStatusSwitch;
 @property (weak, nonatomic) IBOutlet UISwitch *locationSwitch;
 @property (weak, nonatomic) IBOutlet UIButton *saveContact;
 @property (weak, nonatomic) IBOutlet UILabel *recordLabel;
-@property (weak, nonatomic) IBOutlet UIButton *stopButton;
-@property (weak, nonatomic) IBOutlet UIButton *playButton;
 @property (weak, nonatomic) IBOutlet UIView *nameView;
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
+
+
 @end
 
 @implementation ContactPageViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-}
 
 - (void) launchCamera{
     CustomCamera *cameraController = [[CustomCamera alloc]init];
@@ -40,9 +36,11 @@
     cameraController.delegate = self;
     cameraController.showsCameraControls = NO;
     cameraController.navigationBarHidden = YES;
-    cameraController.toolbarHidden = YES;    
+    cameraController.toolbarHidden = YES;
     UIImageView *overlay = [[UIImageView alloc]
                                       initWithImage:[UIImage imageNamed:@"overlay.png"]];
+    overlay.contentMode = UIViewContentModeCenter;
+    overlay.clipsToBounds = YES;
     
     cameraController.cameraOverlayView = overlay;
     [self presentViewController:cameraController animated:YES completion:nil];
@@ -89,6 +87,80 @@
     [self.phoneField resignFirstResponder];
     [self.nameField resignFirstResponder];
     
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    // Disable Stop/Play button when application launches
+    [self.stopButton setEnabled:NO];
+    [self.playButton setEnabled:NO];
+    
+    // Set the audio file
+    NSArray *pathComponents = [NSArray arrayWithObjects:
+                               [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject],
+                               @"MyAudioMemo.m4a",
+                               nil];
+    NSURL *outputFileURL = [NSURL fileURLWithPathComponents:pathComponents];
+    
+    // Setup audio session
+    AVAudioSession *session = [AVAudioSession sharedInstance];
+    [session setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
+    
+    // Define the recorder setting
+    NSMutableDictionary *recordSetting = [[NSMutableDictionary alloc] init];
+    
+    [recordSetting setValue:[NSNumber numberWithInt:kAudioFormatMPEG4AAC] forKey:AVFormatIDKey];
+    [recordSetting setValue:[NSNumber numberWithFloat:44100.0] forKey:AVSampleRateKey];
+    [recordSetting setValue:[NSNumber numberWithInt: 2] forKey:AVNumberOfChannelsKey];
+    
+    // Initiate and prepare the recorder
+    recorder = [[AVAudioRecorder alloc] initWithURL:outputFileURL settings:recordSetting error:NULL];
+    recorder.delegate = self;
+    recorder.meteringEnabled = YES;
+    [recorder prepareToRecord];
+}
+
+- (IBAction)recordTapped:(id)sender {
+    // Stop the audio player before recording
+    if (player.playing) {
+        [player stop];
+    }
+    
+    if (!recorder.recording) {
+        AVAudioSession *session = [AVAudioSession sharedInstance];
+        [session setActive:YES error:nil];
+        
+        // Start recording
+        [recorder record];
+        
+    }
+    
+    [self.stopButton setEnabled:YES];
+    [self.playButton setEnabled:NO];
+}
+
+- (IBAction)stopTapped:(id)sender {
+    [recorder stop];
+    
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+    [audioSession setActive:NO error:nil];
+}
+
+- (IBAction)playTapped:(id)sender {
+    if (!recorder.recording){
+        player = [[AVAudioPlayer alloc] initWithContentsOfURL:recorder.url error:nil];
+        [player setDelegate:self];
+        [player play];
+    }
+}
+
+- (void) audioRecorderDidFinishRecording:(AVAudioRecorder *)avrecorder successfully:(BOOL)flag{
+    [self.recordButton setTitle:@"REC" forState:UIControlStateNormal];
+    
+    [self.stopButton setEnabled:NO];
+    [self.playButton setEnabled:YES];
 }
 
 @end
