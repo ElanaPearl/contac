@@ -8,9 +8,9 @@
 
 #import "ContactPageViewController.h"
 #import "CustomCamera.h"
-#import "Person.h"
+
 #import "AppDelegate.h"
-#import "PersonStore.h"
+
 
 @interface ContactPageViewController (){
     AVAudioRecorder *recorder;
@@ -108,19 +108,8 @@
 
     NSLog(@"%@, %@, %d single, %d location", name, phone, (int) status, (int) location);
     [self launchCamera];
-    
-    Person *person = [[Person alloc]init];
-    person.meetDate = self.getDate;
-    person.name = self.nameField.text;
-    person.phoneNumber = self.phoneField.text;
-    person.single = self.singleStatusSwitch.isOn;
-    person.location = self.addressLabel.text;
-    person.image = self.imageView.image;
-    
-    PersonStore *personStore = [(AppDelegate *)[[UIApplication sharedApplication] delegate] personStore];
-    [personStore addPerson:person];
-    NSLog(@"%@",personStore);
-   
+    NSLog(@"crash");
+       
     // load table screen view with person added
 
 }

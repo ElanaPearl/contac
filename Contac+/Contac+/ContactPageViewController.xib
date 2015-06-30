@@ -7,7 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContactPageViewController">
             <connections>
                 <outlet property="addressLabel" destination="H7g-3R-wDE" id="sr4-nA-Xzo"/>
-                <outlet property="imageView" destination="SuI-2w-iLP" id="67J-3w-drx"/>
+                <outlet property="imageView" destination="0Cj-Vz-7uz" id="ldX-4N-P9c"/>
                 <outlet property="locationSwitch" destination="FQq-sb-mud" id="Tju-AF-YTK"/>
                 <outlet property="nameField" destination="UO1-L2-35s" id="EG8-MY-B6A"/>
                 <outlet property="nameView" destination="05f-wz-E34" id="3L4-yk-qwC"/>
@@ -148,8 +148,8 @@
                     </subviews>
                     <color key="backgroundColor" red="0.16470588235294117" green="0.66666666666666663" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SuI-2w-iLP">
-                    <rect key="frame" x="72" y="184" width="230" height="299"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Cj-Vz-7uz">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="672"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

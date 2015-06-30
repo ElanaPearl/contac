@@ -27,14 +27,9 @@
 		E47993181B43220B003F3B4C /* SecretScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E479930D1B43220B003F3B4C /* SecretScreenViewController.xib */; };
 		E47993191B43220B003F3B4C /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E479930F1B43220B003F3B4C /* WebViewController.m */; };
 		E479931A1B43220B003F3B4C /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E47993101B43220B003F3B4C /* WebViewController.xib */; };
-		E479931B1B43220B003F3B4C /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = E47993121B43220B003F3B4C /* Item.m */; };
-		E479931C1B43220B003F3B4C /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = E47993141B43220B003F3B4C /* Person.m */; };
 		E479931F1B43242C003F3B4C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E479931E1B43242C003F3B4C /* CoreLocation.framework */; };
-		E479932B1B434237003F3B4C /* PersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E479932A1B434237003F3B4C /* PersonViewController.m */; };
-		E479932F1B4342D2003F3B4C /* PersonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E479932D1B4342D2003F3B4C /* PersonCell.m */; };
-		E47993301B4342D2003F3B4C /* PersonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E479932E1B4342D2003F3B4C /* PersonCell.xib */; };
-		E47993321B4342EA003F3B4C /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E47993311B4342EA003F3B4C /* HeaderView.xib */; };
-		E47993351B43431B003F3B4C /* PersonStore.m in Sources */ = {isa = PBXBuildFile; fileRef = E47993341B43431B003F3B4C /* PersonStore.m */; };
+		E4B410941B4352AF00B0A560 /* mandela.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E4B410931B4352AF00B0A560 /* mandela.jpg */; };
+		E4B410B91B435B8500B0A560 /* table.png in Resources */ = {isa = PBXBuildFile; fileRef = E4B410B81B435B8500B0A560 /* table.png */; };
 		E4C451721B421BC300196EBE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C451711B421BC300196EBE /* AVFoundation.framework */; };
 		E4D1B9B01B434AEA00507FF5 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D1B9AF1B434AEA00507FF5 /* icon.png */; };
 /* End PBXBuildFile section */
@@ -83,19 +78,9 @@
 		E479930E1B43220B003F3B4C /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		E479930F1B43220B003F3B4C /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		E47993101B43220B003F3B4C /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
-		E47993111B43220B003F3B4C /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
-		E47993121B43220B003F3B4C /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
-		E47993131B43220B003F3B4C /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
-		E47993141B43220B003F3B4C /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		E479931E1B43242C003F3B4C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		E47993291B434237003F3B4C /* PersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonViewController.h; sourceTree = "<group>"; };
-		E479932A1B434237003F3B4C /* PersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonViewController.m; sourceTree = "<group>"; };
-		E479932C1B4342D1003F3B4C /* PersonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonCell.h; sourceTree = "<group>"; };
-		E479932D1B4342D2003F3B4C /* PersonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonCell.m; sourceTree = "<group>"; };
-		E479932E1B4342D2003F3B4C /* PersonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonCell.xib; sourceTree = "<group>"; };
-		E47993311B4342EA003F3B4C /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HeaderView.xib; path = "Contac+/HeaderView.xib"; sourceTree = "<group>"; };
-		E47993331B43431B003F3B4C /* PersonStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PersonStore.h; path = ../PersonStore.h; sourceTree = "<group>"; };
-		E47993341B43431B003F3B4C /* PersonStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PersonStore.m; path = ../PersonStore.m; sourceTree = "<group>"; };
+		E4B410931B4352AF00B0A560 /* mandela.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mandela.jpg; sourceTree = "<group>"; };
+		E4B410B81B435B8500B0A560 /* table.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = table.png; sourceTree = "<group>"; };
 		E4C451711B421BC300196EBE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		E4D1B9AF1B434AEA00507FF5 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,7 +108,9 @@
 		E47947F51B41C7EA00B41DA9 = {
 			isa = PBXGroup;
 			children = (
-				E47993311B4342EA003F3B4C /* HeaderView.xib */,
+				E4B410A51B435A3300B0A560 /* PersonFiles */,
+				E4B410931B4352AF00B0A560 /* mandela.jpg */,
+				E4B410B81B435B8500B0A560 /* table.png */,
 				E4D1B9AF1B434AEA00507FF5 /* icon.png */,
 				E479931E1B43242C003F3B4C /* CoreLocation.framework */,
 				E4C451711B421BC300196EBE /* AVFoundation.framework */,
@@ -145,11 +132,6 @@
 		E47948001B41C7EA00B41DA9 /* Contac+ */ = {
 			isa = PBXGroup;
 			children = (
-				E47993291B434237003F3B4C /* PersonViewController.h */,
-				E479932A1B434237003F3B4C /* PersonViewController.m */,
-				E479932C1B4342D1003F3B4C /* PersonCell.h */,
-				E479932D1B4342D2003F3B4C /* PersonCell.m */,
-				E479932E1B4342D2003F3B4C /* PersonCell.xib */,
 				E479483F1B4211E300B41DA9 /* overlay.png */,
 				E47948051B41C7EA00B41DA9 /* AppDelegate.h */,
 				E47948061B41C7EA00B41DA9 /* AppDelegate.m */,
@@ -164,9 +146,6 @@
 				E47993231B4328D7003F3B4C /* Custom Camera Controller */,
 				E47993241B4328E9003F3B4C /* Secret Screen Controller */,
 				E47993251B4328F9003F3B4C /* Web View Controller */,
-				E47993261B432902003F3B4C /* Item */,
-				E47993271B432909003F3B4C /* Person */,
-				E47993281B43290F003F3B4C /* Person Store */,
 				E47948011B41C7EA00B41DA9 /* Supporting Files */,
 			);
 			path = "Contac+";
@@ -259,31 +238,11 @@
 			name = "Web View Controller";
 			sourceTree = "<group>";
 		};
-		E47993261B432902003F3B4C /* Item */ = {
+		E4B410A51B435A3300B0A560 /* PersonFiles */ = {
 			isa = PBXGroup;
 			children = (
-				E47993111B43220B003F3B4C /* Item.h */,
-				E47993121B43220B003F3B4C /* Item.m */,
 			);
-			name = Item;
-			sourceTree = "<group>";
-		};
-		E47993271B432909003F3B4C /* Person */ = {
-			isa = PBXGroup;
-			children = (
-				E47993131B43220B003F3B4C /* Person.h */,
-				E47993141B43220B003F3B4C /* Person.m */,
-			);
-			name = Person;
-			sourceTree = "<group>";
-		};
-		E47993281B43290F003F3B4C /* Person Store */ = {
-			isa = PBXGroup;
-			children = (
-				E47993331B43431B003F3B4C /* PersonStore.h */,
-				E47993341B43431B003F3B4C /* PersonStore.m */,
-			);
-			name = "Person Store";
+			name = PersonFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,15 +328,14 @@
 				E47948401B4211E300B41DA9 /* overlay.png in Resources */,
 				E479480D1B41C7EA00B41DA9 /* Main.storyboard in Resources */,
 				E47993181B43220B003F3B4C /* SecretScreenViewController.xib in Resources */,
+				E4B410941B4352AF00B0A560 /* mandela.jpg in Resources */,
 				E4D1B9B01B434AEA00507FF5 /* icon.png in Resources */,
-				E47993321B4342EA003F3B4C /* HeaderView.xib in Resources */,
 				E47948121B41C7EA00B41DA9 /* LaunchScreen.xib in Resources */,
 				E47993071B4302A6003F3B4C /* APPViewController.xib in Resources */,
 				E479482B1B41C88000B41DA9 /* ContactPageViewController.xib in Resources */,
 				E479931A1B43220B003F3B4C /* WebViewController.xib in Resources */,
 				0AF5912D1B421574007D51E7 /* AudioViewController.xib in Resources */,
 				E479480F1B41C7EA00B41DA9 /* Images.xcassets in Resources */,
-				E47993301B4342D2003F3B4C /* PersonCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +343,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4B410B91B435B8500B0A560 /* table.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,18 +354,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E479932F1B4342D2003F3B4C /* PersonCell.m in Sources */,
 				E47948341B42003000B41DA9 /* CustomCamera.m in Sources */,
 				E47993191B43220B003F3B4C /* WebViewController.m in Sources */,
 				E47993061B4302A6003F3B4C /* APPViewController.m in Sources */,
-				E479932B1B434237003F3B4C /* PersonViewController.m in Sources */,
 				E479480A1B41C7EA00B41DA9 /* ViewController.m in Sources */,
-				E47993351B43431B003F3B4C /* PersonStore.m in Sources */,
 				E479483A1B42043600B41DA9 /* CustomCameraViewController.m in Sources */,
 				E47948071B41C7EA00B41DA9 /* AppDelegate.m in Sources */,
-				E479931C1B43220B003F3B4C /* Person.m in Sources */,
 				E479482A1B41C88000B41DA9 /* ContactPageViewController.m in Sources */,
-				E479931B1B43220B003F3B4C /* Item.m in Sources */,
 				E47993171B43220B003F3B4C /* SecretScreenViewController.m in Sources */,
 				0AF5912C1B421574007D51E7 /* AudioViewController.m in Sources */,
 				E47948041B41C7EA00B41DA9 /* main.m in Sources */,

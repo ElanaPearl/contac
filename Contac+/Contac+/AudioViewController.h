@@ -20,5 +20,7 @@
 - (IBAction)stopTapped:(id)sender;
 - (IBAction)playTapped:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
 @end
 

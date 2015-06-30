@@ -11,6 +11,7 @@
 #import "SecretScreenViewController.h"
 #import "APPViewController.h"
 
+
 @interface AppDelegate ()
 
 @end
@@ -19,9 +20,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    self.personStore = [[PersonStore alloc]init];
-    self.window =[[UIWindow alloc] initWithFrame: [[UIScreen mainScreen]bounds]];
+        self.window =[[UIWindow alloc] initWithFrame: [[UIScreen mainScreen]bounds]];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.

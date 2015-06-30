@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PersonStore.h"
+
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -15,7 +15,6 @@
 
 @property (strong, nonatomic) UIViewController *viewController;
 
-@property (strong, nonatomic) PersonStore *personStore;
 
 
 @end

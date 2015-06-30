@@ -11,6 +11,7 @@
 #import "ContactPageViewController.h"
 #import "AudioViewController.h"
 
+
 @interface APPViewController ()
 
 @property (nonatomic, copy) NSArray *controllers;
@@ -30,11 +31,11 @@
     [[self.pageController view] setFrame:[[self view] bounds]];
     
     ContactPageViewController *cpvc = [[ContactPageViewController alloc]init];
-    AudioViewController *avc = [[AudioViewController alloc]init];
+    AudioViewController *pvc = [[AudioViewController alloc]init];
 
     SecretScreenViewController *ssvc;
     
-    self.controllers= [NSArray arrayWithObjects: cpvc, ssvc, avc, nil];
+    self.controllers= [NSArray arrayWithObjects: cpvc, ssvc, pvc, nil];
     
     [self.pageController setViewControllers:self.controllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
     
@@ -48,8 +49,8 @@
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
     
     if ([viewController isKindOfClass:[ContactPageViewController class]]){
-        AudioViewController *avc = [[AudioViewController alloc]init];
-        return avc;
+        AudioViewController *pvc = [[AudioViewController alloc]init];
+        return pvc;
     } else if ([viewController isKindOfClass:[SecretScreenViewController class]]){
         ContactPageViewController *cpvc = [[ContactPageViewController alloc]init];
         return  cpvc;
