@@ -131,13 +131,15 @@
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihX-ud-u8X">
                             <rect key="frame" x="0.0" y="4" width="375" height="36"/>
                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
-                            <state key="normal" title="SAVE"/>
+                            <state key="normal" title="SAVE">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="0.62" colorSpace="calibratedRGB"/>
+                            </state>
                             <connections>
                                 <action selector="saveContactAndTakePicture:" destination="-1" eventType="touchUpInside" id="8FZ-UD-0r0"/>
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" red="0.34987728280000002" green="0.82761205810000005" blue="0.441339013" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.16470588235294117" green="0.66666666666666663" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SuI-2w-iLP">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -147,23 +149,5 @@
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
             <point key="canvasLocation" x="359.5" y="394.5"/>
         </view>
-        <navigationBar contentMode="scaleToFill" id="3No-La-OkT">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-            <items>
-                <navigationItem title="Title" id="Iw6-SX-E39">
-                    <barButtonItem key="rightBarButtonItem" title="Item" id="E0Z-jf-TvS"/>
-                </navigationItem>
-            </items>
-            <point key="canvasLocation" x="54" y="551"/>
-        </navigationBar>
-        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Z1M-d2-HA0">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-            <items>
-                <barButtonItem title="Item" id="uvu-Pb-ED8"/>
-            </items>
-            <point key="canvasLocation" x="51" y="667"/>
-        </toolbar>
     </objects>
 </document>

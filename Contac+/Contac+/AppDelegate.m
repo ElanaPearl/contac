@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 #import "ContactPageViewController.h"
+#import "SecretScreenViewController.h"
+#import "APPViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -16,13 +19,22 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
     self.window =[[UIWindow alloc] initWithFrame: [[UIScreen mainScreen]bounds]];
-    ContactPageViewController *cpvc = [[ContactPageViewController alloc] init];
     
-    self.window.rootViewController = cpvc;
+    // Make contact page
+    // ContactPageViewController *cpvc = [[ContactPageViewController alloc] init];
+//    APPViewController *apvc = [[APPViewController alloc]init];
+//    
+//    self.window.rootViewController = apvc;
+//    
+//    self.window.backgroundColor = [UIColor blackColor];
+//    [self.window makeKeyAndVisible];
     
-    self.window.backgroundColor = [UIColor blackColor];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    // Override point for customization after application launch.
+    self.viewController = [[APPViewController alloc] initWithNibName:@"APPViewController" bundle:nil];
+    self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
 
     return YES;
