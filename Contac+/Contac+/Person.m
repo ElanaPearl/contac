@@ -18,7 +18,6 @@
 		_name = name;
 		_phoneNumber = number;
 		_single = single;
-		_meetDate = [[NSDate alloc]init];
 		//find out how to get location
 		//add picture
 	}

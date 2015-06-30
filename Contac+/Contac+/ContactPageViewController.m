@@ -9,6 +9,8 @@
 #import "ContactPageViewController.h"
 #import "CustomCamera.h"
 #import "Person.h"
+#import "AppDelegate.h"
+#import "PersonStore.h"
 
 @interface ContactPageViewController (){
     AVAudioRecorder *recorder;
@@ -115,7 +117,10 @@
     person.location = self.addressLabel.text;
     person.image = self.imageView.image;
     
-    [
+    PersonStore *personStore = [(AppDelegate *)[[UIApplication sharedApplication] delegate] personStore];
+    [personStore addPerson:person];
+    NSLog(@"%@",personStore);
+   
     // load table screen view with person added
 
 }

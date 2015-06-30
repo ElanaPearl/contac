@@ -20,16 +20,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    self.personStore = [[PersonStore alloc]init];
     self.window =[[UIWindow alloc] initWithFrame: [[UIScreen mainScreen]bounds]];
-    
-    // Make contact page
-    // ContactPageViewController *cpvc = [[ContactPageViewController alloc] init];
-//    APPViewController *apvc = [[APPViewController alloc]init];
-//    
-//    self.window.rootViewController = apvc;
-//    
-//    self.window.backgroundColor = [UIColor blackColor];
-//    [self.window makeKeyAndVisible];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
