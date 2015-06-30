@@ -22,6 +22,7 @@ static NSString *letters = @"abcdefghijklmnopqrstuvwxyz";
     self = [super init];
     if (self) {
         self.people = [NSMutableArray array];
+        self.initials = [[NSMutableDictionary alloc] init];
     }
     return self;
     
@@ -36,9 +37,16 @@ static NSString *letters = @"abcdefghijklmnopqrstuvwxyz";
     Person *newPerson = [Person randomPerson];
     [self.people addObject:newPerson];
     
+    
+    // Get the first char of the name
     NSString *initial = [newPerson.name substringWithRange:[newPerson.name rangeOfComposedCharacterSequenceAtIndex:0]];
     
-    [self.initials addObject:newPerson forKey:initial];
+    // Add the person into the dictionary matching initial letter -> array of names
+    [self.initials setObject:newPerson.name forKey:@[[initial uppercaseString]]];
+    
+    for (NSString* key in self.initials) {
+        NSLog(@"print %@", key);
+    }
     
     return newPerson;
 }

@@ -36,11 +36,6 @@
                             [randomNameList objectAtIndex:nameIndex],
                             [randomLastNameList objectAtIndex:lastNameIndex]];
     
-    
-    int randomValue = arc4random_uniform(100);
-    
-    NSString *randomSerialNumber = [[[NSUUID UUID] UUIDString] substringToIndex:5];
-    
     Person *newPerson = [[self alloc] initWithName:randomName];
     
     return newPerson;
