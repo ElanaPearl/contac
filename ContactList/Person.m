@@ -29,9 +29,9 @@
 
 + (instancetype)randomPerson
 {
-    NSArray *randomNameList = @[@"Nikita", @"Daniel", @"Elana"];
+    NSArray *randomNameList = @[@"Nikita", @"Daniel", @"Elana", @"Jayshree", @"Katelynn", @"TJ", @"Mandela"];
     
-    NSArray *randomLastNameList = @[@"Rau", @"Patrick", @"Simon"];
+    NSArray *randomLastNameList = @[@"Rau", @"Patrick", @"Simon", @"Kykker", @"Sarathy", @"Moreno"];
     
     unsigned int nameIndex = arc4random_uniform((unsigned int)[randomNameList count]);
     unsigned int lastNameIndex = arc4random_uniform((unsigned int)[randomLastNameList count]);

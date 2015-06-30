@@ -11,7 +11,8 @@
 
 @interface PersonStore ()
 @property (nonatomic) NSMutableArray *people;
-@property (nonatomic) NSMutableDictionary *initials;
+@property (nonatomic) NSMutableArray *content;
+@property (nonatomic) NSMutableArray *initials;
 @end
 
 @implementation PersonStore
@@ -23,7 +24,8 @@ static NSString *letters = @"abcdefghijklmnopqrstuvwxyz";
     self = [super init];
     if (self) {
         self.people = [NSMutableArray array];
-        self.initials = [[NSMutableDictionary alloc] init];
+        self.initials = [[NSMutableArray alloc] init];
+        self.content = [[NSMutableArray alloc] init];
     }
     return self;
     
@@ -37,24 +39,52 @@ static NSString *letters = @"abcdefghijklmnopqrstuvwxyz";
     return [_initials copy];
 }
 
+- (NSArray *)allContent {
+    return [_content copy];
+}
+
 - (Person *)createPerson
 {
     Person *newPerson = [Person randomPerson];
-    [self.people addObject:newPerson];
+   // [self.people addObject:newPerson];
     
     
     // Get the first char of the name
     NSString *initial = [newPerson.name substringWithRange:[newPerson.name rangeOfComposedCharacterSequenceAtIndex:0]];
     
-    // Add the person into the dictionary matching initial letter -> array of names
-    [self.initials setObject:newPerson.name forKey:@[[initial uppercaseString]]];
+    if ([_initials containsObject:initial]) {
+        
+        [_initials sortUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+        
+        NSInteger index = [_initials indexOfObject:initial];
+        
+        NSMutableDictionary *dictionary = [_content objectAtIndex:index];
+        NSMutableArray *peopleWithInitial = [dictionary objectForKey:@[initial]];
+        assert(peopleWithInitial);
+        [peopleWithInitial addObject:newPerson];
+        [dictionary setObject:peopleWithInitial forKey:@[initial]];
+        [_content replaceObjectAtIndex:index withObject:dictionary];
+        
+    }
     
-    for (NSString* key in self.initials) {
-        NSLog(@"print %@", key);
+    else {
+        [_initials addObject:initial];
+        [_initials sortUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+        NSInteger index = [_initials indexOfObject:initial];
+        
+        NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
+        NSMutableArray *peopleWithInitial = [[NSMutableArray alloc] init];
+        [peopleWithInitial addObject:newPerson];
+        [dictionary setObject:peopleWithInitial forKey:@[initial]];
+        [_content insertObject:dictionary atIndex:index];
+        
     }
     
     return newPerson;
+        
 }
+
+
 
 - (void)removePerson:(Person *)person
 {

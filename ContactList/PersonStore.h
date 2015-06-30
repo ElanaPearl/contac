@@ -11,9 +11,11 @@
 
 @interface PersonStore : NSObject
 
-- (NSDictionary *) allInitials;
+@property (nonatomic, copy)NSArray *allInitials;
+@property (nonatomic, copy)NSArray *allPeople;
+@property (nonatomic, copy)NSArray *allContent;
+
 - (Person *) createPerson;
-- (NSArray *)allPeople;
 - (void)removePerson:(Person *)person;
 - (void)movePersonAtIndex:(NSInteger)source
                   toIndex:(NSInteger)destination;
