@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecretScreenViewController : UIViewController <UINavigationControllerDelegate, UITextFieldDelegate>
-
-@property (assign) int index;
+@interface SecretScreenViewController : UIViewController <UITextFieldDelegate>
 
 @end

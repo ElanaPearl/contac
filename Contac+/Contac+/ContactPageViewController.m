@@ -22,12 +22,42 @@
 @property (weak, nonatomic) IBOutlet UIView *nameView;
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UILabel *addressLabel;
 
 
 
 @end
 
 @implementation ContactPageViewController
+
+-(void)viewWillAppear:(BOOL)animated{
+    locationManager = [[CLLocationManager alloc] init];
+    geocoder = [[CLGeocoder alloc] init];
+    NSLog(@"LOADED");
+    
+    if([CLLocationManager locationServicesEnabled]){
+        
+        NSLog(@"Location Services Enabled");
+        [locationManager requestWhenInUseAuthorization];
+        //       [locationManager requestAlwaysAuthorization];
+        
+        if([CLLocationManager authorizationStatus]==kCLAuthorizationStatusDenied){
+            UIAlertView *permissionError = [[UIAlertView alloc] initWithTitle:@"App Permission Denied"
+                                                                      message:@"To re-enable, please go to Settings and turn on Location Service for this app."
+                                                                     delegate:nil
+                                                            cancelButtonTitle:@"OK"
+                                                            otherButtonTitles:nil];
+            [permissionError show];
+        }
+    }
+    locationManager.delegate = self;
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    
+    [locationManager startUpdatingLocation];
+    NSLog(@"GETTING ADDRESS");
+    
+    
+}
 
 - (void) launchCamera{
     CustomCamera *cameraController = [[CustomCamera alloc]init];
@@ -93,6 +123,8 @@
 {
     [super viewDidLoad];
     
+    [locationManager stopUpdatingLocation];
+    
     // Disable Stop/Play button when application launches
     [self.stopButton setEnabled:NO];
     [self.playButton setEnabled:NO];
@@ -121,6 +153,53 @@
     recorder.meteringEnabled = YES;
     [recorder prepareToRecord];
 }
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+    NSLog(@"didFailWithError: %@", error);
+    UIAlertView *errorAlert = [[UIAlertView alloc]
+                               initWithTitle:@"Error" message:@"Failed to Get Your Location" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [errorAlert show];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+    NSLog(@"Location didUpdateToLocation called");
+    
+}
+
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    NSLog(@"didUpdateToLocation: %@", [locations lastObject]);
+    CLLocation *currentLocation = [locations lastObject];
+    
+    if (currentLocation != nil) {
+        longitudeLabel = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.longitude];
+        latitudeLabel = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.latitude];
+        NSLog(@"longitude: %@ and latitude: %@", longitudeLabel, latitudeLabel);
+    }
+    
+    // Reverse Geocoding
+    NSLog(@"Resolving the Address");
+    [geocoder reverseGeocodeLocation:currentLocation completionHandler:^(NSArray *placemarks, NSError *error) {
+        //     NSLog(@"Found placemarks: %@, error: %@", placemarks, error);
+        if (error == nil && [placemarks count] > 0) {
+            placemark = [placemarks lastObject];
+            self.addressLabel.text = [NSString stringWithFormat:@"%@ %@\n%@ %@\n%@\n%@",
+                                      placemark.subThoroughfare, placemark.thoroughfare,
+                                      placemark.postalCode, placemark.locality,
+                                      placemark.administrativeArea,
+                                      placemark.country];
+            NSLog(@"address is: %@", self.addressLabel.text);
+        } else {
+            NSLog(@"ERRORZ!! %@", error.debugDescription);
+        }
+    } ];
+    
+    //   NSLog(@"UPDATING LOCATION%@", [locations lastObject]);
+}
+
 
 - (IBAction)recordTapped:(id)sender {
     // Stop the audio player before recording
