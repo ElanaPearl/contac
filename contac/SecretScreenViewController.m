@@ -35,13 +35,21 @@
 	
 	webViewController.loadURL = [NSURL URLWithString:@"http://www.facebook.com"];
 	[self presentViewController:webViewController animated:YES completion:nil];
+	
+	//add the speficic person search
 }
 - (IBAction)loadTwitter:(id)sender {
-	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.twitter.com"]];
+	WebViewController *webViewController = [[WebViewController alloc] init];
+	
+	webViewController.loadURL = [NSURL URLWithString:@"http://www.twitter.com"];
+	[self presentViewController:webViewController animated:YES completion:nil];
 }
 
 - (IBAction)loadInstagram:(id)sender {
-	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.instagram.com"]];
+	WebViewController *webViewController = [[WebViewController alloc] init];
+	
+	webViewController.loadURL = [NSURL URLWithString:@"http://www.instagram.com"];
+	[self presentViewController:webViewController animated:YES completion:nil];;
 }
 
 

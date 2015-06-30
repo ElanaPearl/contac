@@ -24,7 +24,11 @@
                 <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Qv-lX-GRx">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                     <items>
-                        <barButtonItem title="X" width="29" id="nay-y2-abx"/>
+                        <barButtonItem title="X" width="29" id="nay-y2-abx">
+                            <connections>
+                                <action selector="close:" destination="-1" id="kfZ-ow-AKl"/>
+                            </connections>
+                        </barButtonItem>
                     </items>
                 </toolbar>
             </subviews>

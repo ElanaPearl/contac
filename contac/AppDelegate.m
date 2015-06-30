@@ -25,7 +25,7 @@
 	SecretScreenViewController *ssvc = [[SecretScreenViewController alloc] init];
 	
 	UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:ssvc];
-	//navController.navigationBarHidden = YES;
+	navController.navigationBarHidden = YES;
 	self.window.rootViewController = navController;
 	
 	[self.window makeKeyAndVisible];
