@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AF5912C1B421574007D51E7 /* AudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF591291B421574007D51E7 /* AudioViewController.m */; };
+		0AF5912D1B421574007D51E7 /* AudioViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AF5912B1B421574007D51E7 /* AudioViewController.xib */; };
 		E47948041B41C7EA00B41DA9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E47948031B41C7EA00B41DA9 /* main.m */; };
 		E47948071B41C7EA00B41DA9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E47948061B41C7EA00B41DA9 /* AppDelegate.m */; };
 		E479480A1B41C7EA00B41DA9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E47948091B41C7EA00B41DA9 /* ViewController.m */; };
@@ -33,6 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0AF591291B421574007D51E7 /* AudioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioViewController.m; sourceTree = "<group>"; };
+		0AF5912A1B421574007D51E7 /* AudioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioViewController.h; sourceTree = "<group>"; };
+		0AF5912B1B421574007D51E7 /* AudioViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AudioViewController.xib; sourceTree = "<group>"; };
 		E47947FE1B41C7EA00B41DA9 /* Contac+.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Contac+.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E47948021B41C7EA00B41DA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E47948031B41C7EA00B41DA9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -96,6 +101,9 @@
 		E47948001B41C7EA00B41DA9 /* Contac+ */ = {
 			isa = PBXGroup;
 			children = (
+				0AF591291B421574007D51E7 /* AudioViewController.m */,
+				0AF5912A1B421574007D51E7 /* AudioViewController.h */,
+				0AF5912B1B421574007D51E7 /* AudioViewController.xib */,
 				E479483F1B4211E300B41DA9 /* overlay.png */,
 				E479483B1B42068400B41DA9 /* back.png */,
 				E47948051B41C7EA00B41DA9 /* AppDelegate.h */,
@@ -228,6 +236,7 @@
 				E479483C1B42068400B41DA9 /* back.png in Resources */,
 				E47948121B41C7EA00B41DA9 /* LaunchScreen.xib in Resources */,
 				E479482B1B41C88000B41DA9 /* ContactPageViewController.xib in Resources */,
+				0AF5912D1B421574007D51E7 /* AudioViewController.xib in Resources */,
 				E479480F1B41C7EA00B41DA9 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,6 +260,7 @@
 				E479483A1B42043600B41DA9 /* CustomCameraViewController.m in Sources */,
 				E47948071B41C7EA00B41DA9 /* AppDelegate.m in Sources */,
 				E479482A1B41C88000B41DA9 /* ContactPageViewController.m in Sources */,
+				0AF5912C1B421574007D51E7 /* AudioViewController.m in Sources */,
 				E47948041B41C7EA00B41DA9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,6 +456,7 @@
 				E47948231B41C7EA00B41DA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E47948241B41C7EA00B41DA9 /* Build configuration list for PBXNativeTarget "Contac+Tests" */ = {
 			isa = XCConfigurationList;
@@ -454,6 +465,7 @@
 				E47948261B41C7EA00B41DA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
