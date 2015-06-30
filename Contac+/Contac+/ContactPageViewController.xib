@@ -129,7 +129,7 @@
                     <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihX-ud-u8X">
-                            <rect key="frame" x="165" y="4" width="45" height="36"/>
+                            <rect key="frame" x="0.0" y="4" width="375" height="36"/>
                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
                             <state key="normal" title="SAVE"/>
                             <connections>
