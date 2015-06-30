@@ -11,7 +11,7 @@
 
 @interface PersonStore : NSObject
 
-@property (nonatomic) NSMutableDictionary *initials;
+- (NSDictionary *) allInitials;
 - (Person *) createPerson;
 - (NSArray *)allPeople;
 - (void)removePerson:(Person *)person;

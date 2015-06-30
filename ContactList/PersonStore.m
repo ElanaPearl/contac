@@ -11,6 +11,7 @@
 
 @interface PersonStore ()
 @property (nonatomic) NSMutableArray *people;
+@property (nonatomic) NSMutableDictionary *initials;
 @end
 
 @implementation PersonStore
@@ -30,6 +31,10 @@ static NSString *letters = @"abcdefghijklmnopqrstuvwxyz";
 - (NSArray *)allPeople
 {
     return [_people copy];
+}
+
+- (NSArray *)allInitials {
+    return [_initials copy];
 }
 
 - (Person *)createPerson

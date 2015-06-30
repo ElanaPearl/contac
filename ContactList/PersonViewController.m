@@ -26,8 +26,25 @@
     NSInteger index = [self.personStore.allPeople indexOfObjectIdenticalTo:newPerson];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
     
+    [self.tableView insert]
     [self.tableView insertRowsAtIndexPaths:@[indexPath]
                           withRowAnimation:UITableViewRowAnimationTop];
+    
+}
+
+- (NSInteger)addPersonToInitialsDictionary:(Person *)person {
+    
+}
+
+- (NSInteger)itemNumberWithPerson:(Person *)person {
+    
+}
+
+- (NSInteger)sectionNumberWithPerson:(Person *)person {
+    
+}
+
+- (NSIndexPath *)indexPathWithPerson:(Person *)person {
     
 }
 
@@ -52,7 +69,11 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.personStore.allPeople.count;
+//    return self.personStore.allPeople.count;
+    
+    NSInteger asciiCode = 65 + section;
+    NSString *string = [NSString stringWithFormat:@"%ld", (long)asciiCode];
+    return [[self.personStore.allInitials objectForKey:@[string]] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -96,6 +117,12 @@
     [self.personStore movePersonAtIndex:sourceIndexPath.row
                                 toIndex:destinationIndexPath.row];
 }
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    //return [self.personStore.allPeople count];
+    return [self.personStore.allInitials count];
+}
+
 
 @end
 
