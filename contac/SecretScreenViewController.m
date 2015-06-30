@@ -19,6 +19,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *twitterButton;
 @property (weak, nonatomic) IBOutlet UIButton *instaButton;
 @property (nonatomic, strong) UIWebView *webView;
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField;
+- (IBAction)clickedBackground;
+
 @end
 
 @implementation SecretScreenViewController
@@ -28,6 +32,17 @@
 	[self.schoolField resignFirstResponder];
 	[self.majorField resignFirstResponder];
 	[self.hometownField resignFirstResponder];
+}
+
+- (BOOL) textFieldShouldReturn:(UITextField *)textField
+{
+	[textField resignFirstResponder];
+	return YES;
+}
+
+-(IBAction)clickedBackground
+{
+	[self.view endEditing:YES];
 }
 
 - (IBAction)loadFacebook:(id)sender {
