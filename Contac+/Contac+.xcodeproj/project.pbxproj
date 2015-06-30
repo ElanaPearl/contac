@@ -36,7 +36,7 @@
 		E47993321B4342EA003F3B4C /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E47993311B4342EA003F3B4C /* HeaderView.xib */; };
 		E47993351B43431B003F3B4C /* PersonStore.m in Sources */ = {isa = PBXBuildFile; fileRef = E47993341B43431B003F3B4C /* PersonStore.m */; };
 		E4C451721B421BC300196EBE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C451711B421BC300196EBE /* AVFoundation.framework */; };
-		E4C451741B4226DC00196EBE /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E4C451731B4226DC00196EBE /* icon.png */; };
+		E4D1B9B01B434AEA00507FF5 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D1B9AF1B434AEA00507FF5 /* icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,7 +97,7 @@
 		E47993331B43431B003F3B4C /* PersonStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PersonStore.h; path = ../PersonStore.h; sourceTree = "<group>"; };
 		E47993341B43431B003F3B4C /* PersonStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PersonStore.m; path = ../PersonStore.m; sourceTree = "<group>"; };
 		E4C451711B421BC300196EBE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		E4C451731B4226DC00196EBE /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		E4D1B9AF1B434AEA00507FF5 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				E47993311B4342EA003F3B4C /* HeaderView.xib */,
+				E4D1B9AF1B434AEA00507FF5 /* icon.png */,
 				E479931E1B43242C003F3B4C /* CoreLocation.framework */,
 				E4C451711B421BC300196EBE /* AVFoundation.framework */,
 				E47948001B41C7EA00B41DA9 /* Contac+ */,
@@ -156,7 +157,6 @@
 				E47948091B41C7EA00B41DA9 /* ViewController.m */,
 				E479480B1B41C7EA00B41DA9 /* Main.storyboard */,
 				E479480E1B41C7EA00B41DA9 /* Images.xcassets */,
-				E4C451731B4226DC00196EBE /* icon.png */,
 				E47948101B41C7EA00B41DA9 /* LaunchScreen.xib */,
 				E47993201B43289A003F3B4C /* App View Controller */,
 				E47993211B4328B3003F3B4C /* Audio View Controller */,
@@ -369,10 +369,10 @@
 				E47948401B4211E300B41DA9 /* overlay.png in Resources */,
 				E479480D1B41C7EA00B41DA9 /* Main.storyboard in Resources */,
 				E47993181B43220B003F3B4C /* SecretScreenViewController.xib in Resources */,
+				E4D1B9B01B434AEA00507FF5 /* icon.png in Resources */,
 				E47993321B4342EA003F3B4C /* HeaderView.xib in Resources */,
 				E47948121B41C7EA00B41DA9 /* LaunchScreen.xib in Resources */,
 				E47993071B4302A6003F3B4C /* APPViewController.xib in Resources */,
-				E4C451741B4226DC00196EBE /* icon.png in Resources */,
 				E479482B1B41C88000B41DA9 /* ContactPageViewController.xib in Resources */,
 				E479931A1B43220B003F3B4C /* WebViewController.xib in Resources */,
 				0AF5912D1B421574007D51E7 /* AudioViewController.xib in Resources */,
