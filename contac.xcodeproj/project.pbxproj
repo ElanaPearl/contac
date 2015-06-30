@@ -14,6 +14,11 @@
 		0AD90A991B41C6EF00131AF5 /* contacTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD90A981B41C6EF00131AF5 /* contacTests.m */; };
 		4C9C6EEB1B41DA4C004C4299 /* SecretScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9C6EE91B41DA4C004C4299 /* SecretScreenViewController.m */; };
 		4C9C6EEC1B41DA4C004C4299 /* SecretScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C9C6EEA1B41DA4C004C4299 /* SecretScreenViewController.xib */; };
+		4C9C6EF21B420C97004C4299 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9C6EF11B420C97004C4299 /* Person.m */; };
+		4C9C6EF51B420EEB004C4299 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9C6EF41B420EEB004C4299 /* Item.m */; };
+		4C9C6EF81B421244004C4299 /* PersonStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9C6EF71B421244004C4299 /* PersonStore.m */; };
+		4C9C6EFB1B42180C004C4299 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9C6EFA1B42180C004C4299 /* WebViewController.m */; };
+		4C9C6EFF1B421DEB004C4299 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C9C6EFE1B421DEB004C4299 /* WebViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,15 @@
 		4C9C6EE81B41DA4C004C4299 /* SecretScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecretScreenViewController.h; sourceTree = "<group>"; };
 		4C9C6EE91B41DA4C004C4299 /* SecretScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecretScreenViewController.m; sourceTree = "<group>"; };
 		4C9C6EEA1B41DA4C004C4299 /* SecretScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecretScreenViewController.xib; sourceTree = "<group>"; };
+		4C9C6EF01B420C97004C4299 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		4C9C6EF11B420C97004C4299 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		4C9C6EF31B420EEB004C4299 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		4C9C6EF41B420EEB004C4299 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
+		4C9C6EF61B421244004C4299 /* PersonStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonStore.h; sourceTree = "<group>"; };
+		4C9C6EF71B421244004C4299 /* PersonStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonStore.m; sourceTree = "<group>"; };
+		4C9C6EF91B42180C004C4299 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		4C9C6EFA1B42180C004C4299 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		4C9C6EFE1B421DEB004C4299 /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +100,15 @@
 				4C9C6EE81B41DA4C004C4299 /* SecretScreenViewController.h */,
 				4C9C6EE91B41DA4C004C4299 /* SecretScreenViewController.m */,
 				4C9C6EEA1B41DA4C004C4299 /* SecretScreenViewController.xib */,
+				4C9C6EF91B42180C004C4299 /* WebViewController.h */,
+				4C9C6EFA1B42180C004C4299 /* WebViewController.m */,
+				4C9C6EFE1B421DEB004C4299 /* WebViewController.xib */,
+				4C9C6EF31B420EEB004C4299 /* Item.h */,
+				4C9C6EF41B420EEB004C4299 /* Item.m */,
+				4C9C6EF01B420C97004C4299 /* Person.h */,
+				4C9C6EF11B420C97004C4299 /* Person.m */,
+				4C9C6EF61B421244004C4299 /* PersonStore.h */,
+				4C9C6EF71B421244004C4299 /* PersonStore.m */,
 				0AD90A891B41C6EE00131AF5 /* Images.xcassets */,
 				0AD90A8B1B41C6EE00131AF5 /* LaunchScreen.xib */,
 				0AD90A7C1B41C6EE00131AF5 /* Supporting Files */,
@@ -202,6 +225,7 @@
 				4C9C6EEC1B41DA4C004C4299 /* SecretScreenViewController.xib in Resources */,
 				0AD90A8D1B41C6EE00131AF5 /* LaunchScreen.xib in Resources */,
 				0AD90A8A1B41C6EE00131AF5 /* Images.xcassets in Resources */,
+				4C9C6EFF1B421DEB004C4299 /* WebViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,8 +243,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C9C6EF81B421244004C4299 /* PersonStore.m in Sources */,
+				4C9C6EFB1B42180C004C4299 /* WebViewController.m in Sources */,
+				4C9C6EF51B420EEB004C4299 /* Item.m in Sources */,
 				4C9C6EEB1B41DA4C004C4299 /* SecretScreenViewController.m in Sources */,
 				0AD90A821B41C6EE00131AF5 /* AppDelegate.m in Sources */,
+				4C9C6EF21B420C97004C4299 /* Person.m in Sources */,
 				0AD90A7F1B41C6EE00131AF5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,6 +368,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = contac/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -350,6 +379,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = contac/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
