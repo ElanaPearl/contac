@@ -8,6 +8,10 @@
 
 #import "Person.h"
 
+@interface Person () <NSCopying>
+
+@end
+
 @implementation Person
 
 - (instancetype)initWithName:(NSString *)name
@@ -41,5 +45,10 @@
     return newPerson;
 }
 
+- (id)copyWithZone:(NSZone *)zone {
+    return nil;
+}
+
 
 @end
+
