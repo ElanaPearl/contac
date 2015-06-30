@@ -12,9 +12,9 @@
 @interface Person : NSObject
 
 @property (nonatomic,copy) NSString *name;
-@property (nonatomic,strong) NSNumber *phoneNumber;
-@property (nonatomic,strong) NSDate *meetDate;
-@property (nonatomic,copy) NSString *location; //lookup
+@property (nonatomic,copy) NSString *phoneNumber;
+@property (nonatomic,strong) NSString *meetDate;
+@property (nonatomic,copy) NSString *location; 
 @property (nonatomic,assign) BOOL single;
 @property (nonatomic, strong) UIImage *image;
 

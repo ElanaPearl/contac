@@ -8,6 +8,7 @@
 
 #import "ContactPageViewController.h"
 #import "CustomCamera.h"
+#import "Person.h"
 
 @interface ContactPageViewController (){
     AVAudioRecorder *recorder;
@@ -29,6 +30,8 @@
 @end
 
 @implementation ContactPageViewController
+
+
 
 -(void)viewWillAppear:(BOOL)animated{
     locationManager = [[CLLocationManager alloc] init];
@@ -55,8 +58,6 @@
     
     [locationManager startUpdatingLocation];
     NSLog(@"GETTING ADDRESS");
-    
-    
 }
 
 - (void) launchCamera{
@@ -80,20 +81,42 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo{
     myImage = image;
     myImageView.image = myImage;
-    NSLog(@"mandela is relapsing");
     [picker dismissViewControllerAnimated:YES completion:nil];
     self.imageView.image = myImage;
 }
 
 
+- (NSString *) getDate{
+    NSDateFormatter *formatter;
+    NSString        *dateString;
+    
+    formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"dd-MM-yyyy"];
+    
+    dateString = [formatter stringFromDate:[NSDate date]];
+    
+    return dateString;
+}
 
 - (IBAction) saveContactAndTakePicture:(id)sender{
     NSString *name = self.nameField.text;
     NSString *phone = self.phoneField.text;
     BOOL status = self.singleStatusSwitch.isOn;
     BOOL location = self.locationSwitch.isOn;
+
     NSLog(@"%@, %@, %d single, %d location", name, phone, (int) status, (int) location);
     [self launchCamera];
+    
+    Person *person = [[Person alloc]init];
+    person.meetDate = self.getDate;
+    person.name = self.nameField.text;
+    person.phoneNumber = self.phoneField.text;
+    person.single = self.singleStatusSwitch.isOn;
+    person.location = self.addressLabel.text;
+    person.image = self.imageView.image;
+    
+    [
+    // load table screen view with person added
 
 }
 
@@ -122,8 +145,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     [locationManager stopUpdatingLocation];
+    
     
     // Disable Stop/Play button when application launches
     [self.stopButton setEnabled:NO];

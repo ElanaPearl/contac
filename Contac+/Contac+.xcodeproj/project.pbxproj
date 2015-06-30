@@ -133,40 +133,24 @@
 		E47948001B41C7EA00B41DA9 /* Contac+ */ = {
 			isa = PBXGroup;
 			children = (
-				E47993031B4302A6003F3B4C /* APPViewController.h */,
-				E47993041B4302A6003F3B4C /* APPViewController.m */,
-				E47993051B4302A6003F3B4C /* APPViewController.xib */,
-				0AF591291B421574007D51E7 /* AudioViewController.m */,
-				0AF5912A1B421574007D51E7 /* AudioViewController.h */,
-				0AF5912B1B421574007D51E7 /* AudioViewController.xib */,
 				E479483F1B4211E300B41DA9 /* overlay.png */,
 				E47948051B41C7EA00B41DA9 /* AppDelegate.h */,
 				E47948061B41C7EA00B41DA9 /* AppDelegate.m */,
 				E47948081B41C7EA00B41DA9 /* ViewController.h */,
 				E47948091B41C7EA00B41DA9 /* ViewController.m */,
-				E47948271B41C88000B41DA9 /* ContactPageViewController.h */,
-				E47948281B41C88000B41DA9 /* ContactPageViewController.m */,
-				E47948381B42043600B41DA9 /* CustomCameraViewController.h */,
-				E47948391B42043600B41DA9 /* CustomCameraViewController.m */,
-				E47948291B41C88000B41DA9 /* ContactPageViewController.xib */,
-				E47948321B42003000B41DA9 /* CustomCamera.h */,
-				E47948331B42003000B41DA9 /* CustomCamera.m */,
-				E479930B1B43220B003F3B4C /* SecretScreenViewController.h */,
-				E479930C1B43220B003F3B4C /* SecretScreenViewController.m */,
-				E479930D1B43220B003F3B4C /* SecretScreenViewController.xib */,
-				E479930E1B43220B003F3B4C /* WebViewController.h */,
-				E479930F1B43220B003F3B4C /* WebViewController.m */,
-				E47993101B43220B003F3B4C /* WebViewController.xib */,
-				E47993111B43220B003F3B4C /* Item.h */,
-				E47993121B43220B003F3B4C /* Item.m */,
-				E47993131B43220B003F3B4C /* Person.h */,
-				E47993141B43220B003F3B4C /* Person.m */,
-				E47993151B43220B003F3B4C /* PersonStore.h */,
-				E47993161B43220B003F3B4C /* PersonStore.m */,
 				E479480B1B41C7EA00B41DA9 /* Main.storyboard */,
 				E479480E1B41C7EA00B41DA9 /* Images.xcassets */,
 				E4C451731B4226DC00196EBE /* icon.png */,
 				E47948101B41C7EA00B41DA9 /* LaunchScreen.xib */,
+				E47993201B43289A003F3B4C /* App View Controller */,
+				E47993211B4328B3003F3B4C /* Audio View Controller */,
+				E47993221B4328C6003F3B4C /* Contact Page View Controller */,
+				E47993231B4328D7003F3B4C /* Custom Camera Controller */,
+				E47993241B4328E9003F3B4C /* Secret Screen Controller */,
+				E47993251B4328F9003F3B4C /* Web View Controller */,
+				E47993261B432902003F3B4C /* Item */,
+				E47993271B432909003F3B4C /* Person */,
+				E47993281B43290F003F3B4C /* Person Store */,
 				E47948011B41C7EA00B41DA9 /* Supporting Files */,
 			);
 			path = "Contac+";
@@ -196,6 +180,94 @@
 				E479481C1B41C7EA00B41DA9 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E47993201B43289A003F3B4C /* App View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E47993031B4302A6003F3B4C /* APPViewController.h */,
+				E47993041B4302A6003F3B4C /* APPViewController.m */,
+				E47993051B4302A6003F3B4C /* APPViewController.xib */,
+			);
+			name = "App View Controller";
+			sourceTree = "<group>";
+		};
+		E47993211B4328B3003F3B4C /* Audio View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0AF591291B421574007D51E7 /* AudioViewController.m */,
+				0AF5912A1B421574007D51E7 /* AudioViewController.h */,
+				0AF5912B1B421574007D51E7 /* AudioViewController.xib */,
+			);
+			name = "Audio View Controller";
+			sourceTree = "<group>";
+		};
+		E47993221B4328C6003F3B4C /* Contact Page View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E47948271B41C88000B41DA9 /* ContactPageViewController.h */,
+				E47948281B41C88000B41DA9 /* ContactPageViewController.m */,
+				E47948291B41C88000B41DA9 /* ContactPageViewController.xib */,
+			);
+			name = "Contact Page View Controller";
+			sourceTree = "<group>";
+		};
+		E47993231B4328D7003F3B4C /* Custom Camera Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E47948381B42043600B41DA9 /* CustomCameraViewController.h */,
+				E47948391B42043600B41DA9 /* CustomCameraViewController.m */,
+				E47948321B42003000B41DA9 /* CustomCamera.h */,
+				E47948331B42003000B41DA9 /* CustomCamera.m */,
+			);
+			name = "Custom Camera Controller";
+			sourceTree = "<group>";
+		};
+		E47993241B4328E9003F3B4C /* Secret Screen Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E479930B1B43220B003F3B4C /* SecretScreenViewController.h */,
+				E479930C1B43220B003F3B4C /* SecretScreenViewController.m */,
+				E479930D1B43220B003F3B4C /* SecretScreenViewController.xib */,
+			);
+			name = "Secret Screen Controller";
+			sourceTree = "<group>";
+		};
+		E47993251B4328F9003F3B4C /* Web View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E479930E1B43220B003F3B4C /* WebViewController.h */,
+				E479930F1B43220B003F3B4C /* WebViewController.m */,
+				E47993101B43220B003F3B4C /* WebViewController.xib */,
+			);
+			name = "Web View Controller";
+			sourceTree = "<group>";
+		};
+		E47993261B432902003F3B4C /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				E47993111B43220B003F3B4C /* Item.h */,
+				E47993121B43220B003F3B4C /* Item.m */,
+			);
+			name = Item;
+			sourceTree = "<group>";
+		};
+		E47993271B432909003F3B4C /* Person */ = {
+			isa = PBXGroup;
+			children = (
+				E47993131B43220B003F3B4C /* Person.h */,
+				E47993141B43220B003F3B4C /* Person.m */,
+			);
+			name = Person;
+			sourceTree = "<group>";
+		};
+		E47993281B43290F003F3B4C /* Person Store */ = {
+			isa = PBXGroup;
+			children = (
+				E47993151B43220B003F3B4C /* PersonStore.h */,
+				E47993161B43220B003F3B4C /* PersonStore.m */,
+			);
+			name = "Person Store";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

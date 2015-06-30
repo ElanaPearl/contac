@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContactPageViewController">
             <connections>
+                <outlet property="addressLabel" destination="H7g-3R-wDE" id="sr4-nA-Xzo"/>
                 <outlet property="imageView" destination="SuI-2w-iLP" id="67J-3w-drx"/>
                 <outlet property="locationSwitch" destination="FQq-sb-mud" id="Tju-AF-YTK"/>
                 <outlet property="nameField" destination="UO1-L2-35s" id="EG8-MY-B6A"/>
@@ -44,7 +45,7 @@
                             <rect key="frame" x="306" y="27" width="51" height="31"/>
                         </switch>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Single?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcN-vg-oYv">
-                            <rect key="frame" x="27" y="22" width="116" height="36"/>
+                            <rect key="frame" x="20" y="22" width="116" height="36"/>
                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="27"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57000000000000006" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -109,9 +110,15 @@
                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FQq-sb-mud">
                             <rect key="frame" x="305" y="24" width="51" height="31"/>
                         </switch>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Save location?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwm-uH-Uv6">
-                            <rect key="frame" x="30" y="22" width="179" height="36"/>
-                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="27"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7g-3R-wDE">
+                            <rect key="frame" x="19" y="5" width="159" height="70"/>
+                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="13"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.37" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Save location?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwm-uH-Uv6">
+                            <rect key="frame" x="166" y="22" width="179" height="36"/>
+                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.56999999999999995" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -142,12 +149,12 @@
                     <color key="backgroundColor" red="0.16470588235294117" green="0.66666666666666663" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SuI-2w-iLP">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <rect key="frame" x="72" y="184" width="230" height="299"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-            <point key="canvasLocation" x="359.5" y="394.5"/>
+            <point key="canvasLocation" x="357.5" y="517.5"/>
         </view>
     </objects>
 </document>

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PersonStore.h"
 
 @interface APPViewController :  UIViewController <UIPageViewControllerDataSource>
 
